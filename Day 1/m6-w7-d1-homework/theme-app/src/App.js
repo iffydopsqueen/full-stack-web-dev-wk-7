@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from "styled-components";
 import theme from "styled-theming";
 import { Provider as ReduxProvider } from "react-redux";
 import DarkThemeProvider from "./DarkThemeProvider";
+import DarkThemeToggle from "./DarkThemeToggle";
 import store from "./redux/store";
 
 export const theme1 = theme("theme", {
@@ -42,7 +43,7 @@ const App = () => {
           <SwitchTheme>
               <h1>Theme App</h1>
               <p>
-                <input type="checkbox" /> Use Dark Theme
+                <DarkThemeToggle />
               </p>
             </SwitchTheme>
             <Container>
