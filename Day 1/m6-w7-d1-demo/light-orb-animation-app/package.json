@@ -7,10 +7,20 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@react-vertex/core": "3.0.0",
+    "@react-vertex/dom-hooks": "1.11.0",
+    "@react-vertex/geometry-hooks": "3.0.0",
+    "@react-vertex/material-hooks": "3.0.0",
+    "@react-vertex/math-hooks": "2.0.0",
+    "@react-vertex/orbit-camera": "3.0.0",
+    "d3-timer": "1.0.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "typescript": "3.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
