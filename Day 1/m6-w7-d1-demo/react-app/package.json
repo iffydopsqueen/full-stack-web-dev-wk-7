@@ -1,6 +1,7 @@
 {
-  "name": "react-app",
+  "name": "animated-bar-chart-using-react-move",
   "version": "0.1.0",
+  "description": "Bar chart with enter/leave/update transitions, built with React and react-move",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
