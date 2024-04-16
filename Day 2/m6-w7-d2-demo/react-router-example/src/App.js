@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link, Outlet } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, Outlet, useParams } from "react-router-dom";
 
 const BlogPosts = {
   "1": {
@@ -24,6 +24,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/posts" element={<Posts />}>
           <Route path="/posts" element={<PostLists />} />
+          <Route path=":slug" element={<Post />} />
         </Route>
       </Routes>
     </Router>
@@ -53,6 +54,19 @@ function Posts() {
     <div style={{ padding: 20 }}>
       <h2>Blog</h2>
       <Outlet />
+    </div>
+  );
+}
+
+function Post() {
+  const { slug } = useParams();
+  const post = BlogPosts[slug];
+  const { title, description } = post;
+
+  return (
+    <div style={{ padding: 20 }}>
+      <h3>{title}</h3>
+      <p>{description}</p>
     </div>
   );
 }
