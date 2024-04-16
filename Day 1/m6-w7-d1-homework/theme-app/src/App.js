@@ -1,5 +1,16 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
+import theme from "styled-theming";
+
+export const theme1 = theme("theme", {
+  light: "#fff",
+  dark: "#2d2d2d",
+});
+
+export const theme2 = theme("theme", {
+  light: "#000",
+  dark: "#fff",
+});
 
 const Container = styled.div`
   display: flex;
@@ -9,6 +20,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   font-family: sans-serif;
+  background-color: ${theme1};
 `;
 
 const SwitchTheme = styled.div`
