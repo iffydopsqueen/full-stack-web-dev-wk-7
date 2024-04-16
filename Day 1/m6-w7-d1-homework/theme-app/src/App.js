@@ -1,6 +1,8 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import theme from "styled-theming";
+import { Provider as ReduxProvider } from "react-redux";
+import store from "./redux/store";
 
 export const theme1 = theme("theme", {
   light: "#fff",
@@ -34,18 +36,20 @@ const SwitchTheme = styled.div`
 const App = () => {
   return (
     <React.Fragment>
-      <ThemeProvider theme={{ theme: "light" }}>
-        <SwitchTheme>
-          <h1>Theme App</h1>
-          <p>
-            <input type="checkbox" /> Use Dark Theme
-          </p>
-        </SwitchTheme>
-        <Container>
-          <h2>Welcome!</h2>
-          <h3>Full Stack Web Development</h3>
-        </Container>
-      </ThemeProvider>
+      <ReduxProvider store={store}>
+        <ThemeProvider theme={{ theme: "light" }}>
+          <SwitchTheme>
+            <h1>Theme App</h1>
+            <p>
+              <input type="checkbox" /> Use Dark Theme
+            </p>
+          </SwitchTheme>
+          <Container>
+            <h2>Welcome!</h2>
+            <h3>Full Stack Web Development</h3>
+          </Container>
+        </ThemeProvider>
+      </ReduxProvider>
     </React.Fragment>
   )
 };
