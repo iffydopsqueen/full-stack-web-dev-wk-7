@@ -8,14 +8,17 @@ img.nf {
 }
 img.hb {
   height: 80px;
+  border: 1.5px solid grey;
   padding: 10px 10px;
 }
 img.hu {
   height: 80px;
+  border: 1.5px solid grey;
   padding: 10px 10px;
 }
 img.pr {
   height: 80px;
+  border: 1.5px solid grey;
 }
 div h3 {
   width: 350px;
@@ -29,4 +32,8 @@ div h3 span {
   color:rgb(28, 59, 85);
   font-weight: bold;
   margin-left: 10px;
+}
+div h2 {
+  padding-top: 20px;
+  margin: 45px;
 }
